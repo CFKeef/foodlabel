@@ -4,7 +4,7 @@ import Dropdown from "./dropdown";
 import Logo from "../public/images/foodlabel.svg";
 import Burger from "../public/images/burger.svg";
 import Close from "../public/images/x.svg";
-import styles from "./navigation.module.scss";
+import styles from "../styles/navigation.module.scss";
 
 const Navigation: React.FunctionComponent = () => {
   const [isShowing, setIsShowing] = useState(false);

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./dropdown.module.scss";
+import styles from "../styles/dropdown.module.scss";
 
 const Dropdown: React.FunctionComponent = () => {
   return (
