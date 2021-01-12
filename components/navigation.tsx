@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Link from "next/link";
 import Dropdown from "./dropdown";
 import Logo from "../public/images/foodlabel.svg";
 import Burger from "../public/images/burger.svg";
@@ -19,43 +19,34 @@ const Navigation: React.FunctionComponent = () => {
     return isShowing ? <Dropdown /> : null;
   };
 
-  // Generate Menu List
-  const generateMenu = () => {
-    return (
-      <React.Fragment>
-        <ul>
-          <li>
-            <h4>How It Works</h4>
-          </li>
-          <li>
-            <h4>Pricing</h4>
-          </li>
-          <li>
-            <h4>How It Works</h4>
-          </li>
-        </ul>
-      </React.Fragment>
-    );
-  };
-
   return (
     <header className={styles.navContainer}>
       <div className={styles.navRow}>
         <img src={Logo} draggable={false} />
-        <ul>
-          <li>
-            <h4>How It Works</h4>
-          </li>
-          <li>
-            <h4>Pricing</h4>
-          </li>
-          <li>
-            <button>Sign Up</button>
-          </li>
-          <li>
-            <button>Sign In</button>
-          </li>
-        </ul>
+        <nav className={styles.desktopMenu}>
+          <ul>
+            <li>
+              <Link href={"/"} passHref>
+                How It Works
+              </Link>
+            </li>
+            <li>
+              <Link href={"/"} passHref>
+                Pricing
+              </Link>
+            </li>
+            <li className={styles.primaryBtn}>
+              <Link href={"/signup"} as={"/signup"}>
+                Sign Up
+              </Link>
+            </li>
+            <li className={styles.secondaryBtn}>
+              <Link href={"/signin"} as={"/signin"}>
+                Login
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <button
           onClick={() => {
             setIsShowing(!isShowing);

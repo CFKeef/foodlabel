@@ -9,7 +9,7 @@ const Layout = ({
   home?: boolean;
 }) => {
   return (
-    <div>
+    <div className={"content"}>
       <Head>
         <link
           rel="preload"

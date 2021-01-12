@@ -10,9 +10,54 @@
     align-items: center;
     width: 100%;
 
-    ul {
-      @media (max-width: 30em) {
+    @media (max-width: 30em) {
+      .desktopMenu {
         display: none;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: row;
+        padding: 0;
+
+        li {
+          margin: 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            color: #300076;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.56px;
+            width: 100%;
+            text-align: center;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:active {
+            transform: translateY(2px);
+          }
+        }
+        .primaryBtn {
+          background: #ffe6e2;
+          height: 40px;
+          width: 120px;
+        }
+
+        .secondaryBtn {
+          background-color: #592cba;
+          padding: 0 30px;
+
+          a {
+            color: #ffe6e2;
+          }
+        }
       }
     }
 

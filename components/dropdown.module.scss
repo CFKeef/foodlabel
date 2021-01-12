@@ -3,6 +3,7 @@
   justify-content: center;
   align-content: center;
   width: 100%;
+  max-width: 1100px;
 
   .listContainer {
     display: flex;
@@ -10,8 +11,11 @@
     align-content: center;
     flex-direction: column;
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 5px 0;
     width: 100%;
+    -webkit-box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
+    -moz-box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
+    box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
 
     li {
       display: flex;
@@ -26,6 +30,16 @@
         font-size: 16px;
         letter-spacing: 0.56px;
         line-height: 40px;
+        width: 100%;
+        text-align: center;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: translateY(2px);
       }
     }
 
