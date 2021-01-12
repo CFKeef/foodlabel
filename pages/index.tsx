@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Layout from "../components/layout";
 
-export default function Home() {
+function Home() {
   return (
     <Layout home>
       <Head>
@@ -12,3 +12,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+export default Home;

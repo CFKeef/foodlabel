@@ -1,6 +1,4 @@
-import { link } from "fs";
 import Head from "next/head";
-import Link from "next/link";
 import Navigation from "./navigation";
 
 const Layout = ({

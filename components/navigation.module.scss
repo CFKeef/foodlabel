@@ -1,24 +1,42 @@
 .navContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 
-  button {
-    font-size: 100%;
-    font-family: inherit;
-    border: 0;
-    padding: 0;
+  .navRow {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 
-    &:hover,
-    &:focus {
-      cursor: pointer;
+    ul {
+      @media (max-width: 30em) {
+        display: none;
+      }
     }
 
-    &:active {
-      transform: scale(0.89);
+    button {
+      font-size: 100%;
+      font-family: inherit;
+      border: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(0.89);
+      }
+
+      @media (min-width: 30em) {
+        display: none;
+      }
     }
   }
 }

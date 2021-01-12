@@ -1,0 +1,46 @@
+.parentContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+
+  .listContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      height: 40px;
+      margin: 5px 0;
+
+      a {
+        color: #300076;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.56px;
+        line-height: 40px;
+      }
+    }
+
+    .primaryBtn {
+      width: 100%;
+      background: #ffe6e2;
+    }
+
+    .secondaryBtn {
+      width: 100%;
+      background-color: #592cba;
+
+      a {
+        color: #ffe6e2;
+      }
+    }
+  }
+}
