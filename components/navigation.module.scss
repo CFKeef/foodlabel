@@ -1,0 +1,24 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.89);
+    }
+  }
+}

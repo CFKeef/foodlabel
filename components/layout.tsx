@@ -17,19 +17,19 @@ const Layout = ({
           rel="preload"
           href="/fonts/sulsansregular-webfont.woff"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/sulsanslight-webfont.woff"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/sulsansbold-webfont.woff"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
       </Head>
       <Navigation />
