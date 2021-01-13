@@ -74,4 +74,77 @@
 }
 
 @media (min-width: 480px) {
+  .explanationContainer {
+    background-color: #592cba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contentContainer {
+      margin: 40px 20px;
+
+      h1,
+      p {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 10px 0;
+      }
+
+      h1 {
+        color: #ffe6e2;
+        font-size: 28px;
+      }
+
+      p {
+        color: hsla(8, 100%, 94%, 0.7);
+        font-size: 16px;
+      }
+
+      ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 20px;
+          padding: 20px;
+          h2,
+          h1,
+          p {
+            color: #592cba;
+          }
+
+          h1 {
+            font-size: 22px;
+          }
+
+          p {
+            font-size: 14px;
+            width: 100%;
+          }
+          img {
+            margin-bottom: 20px;
+          }
+        }
+
+        .expCard0 {
+          background-color: #ffe6e2;
+        }
+        .expCard1 {
+          background-color: #e2e6ff;
+        }
+        .expCard2 {
+          background-color: #cae1e7;
+        }
+      }
+    }
+  }
 }
