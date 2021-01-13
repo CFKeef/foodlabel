@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Explanation from "../components/explanation";
 import Features from "../components/features";
+import Pricing from "../components/pricing";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Hero />
       <Explanation />
       <Features />
+      <Pricing />
     </Layout>
   );
 }
