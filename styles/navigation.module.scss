@@ -8,12 +8,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 0.5rem 20px 0 20px;
 
     @media (max-width: 30em) {
       .desktopMenu {
         display: none;
       }
+    }
+
+    .logoImage {
+      height: 30px;
+      width: auto;
     }
 
     nav {

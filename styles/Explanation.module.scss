@@ -1,0 +1,21 @@
+@media (max-width: 480px) {
+  .explanationContainer {
+    background-color: #592cba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contentContainer {
+      margin: 20px;
+
+      h1,
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+}

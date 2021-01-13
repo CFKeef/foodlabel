@@ -22,7 +22,12 @@ const Navigation: React.FunctionComponent = () => {
   return (
     <header className={styles.navContainer}>
       <div className={styles.navRow}>
-        <img src={Logo} draggable={false} />
+        <img
+          src={Logo}
+          draggable={false}
+          className={styles.logoImage}
+          alt={"Image depicting our logo"}
+        />
         <nav className={styles.desktopMenu}>
           <ul>
             <li>

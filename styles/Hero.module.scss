@@ -1,11 +1,11 @@
 @media (max-width: 480px) {
   .heroContainer {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    margin: 2rem 20px 0 20px;
+    width: calc(100% - 40px);
     .textContainer {
       width: 100%;
       h1 {
@@ -21,7 +21,7 @@
       }
       a {
         display: block;
-        color: #fff;
+        color: #ffe6e2;
         font-weight: 700;
         font-size: 16px;
         line-height: 40px;
@@ -53,6 +53,7 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
+    margin: 0;
     .textContainer {
       width: 50%;
       h1 {
@@ -69,7 +70,7 @@
       }
       a {
         display: block;
-        color: #fff;
+        color: #ffe6e2;
         font-weight: 700;
         font-size: 16px;
         line-height: 40px;
