@@ -12,31 +12,30 @@ interface Step {
 }
 
 const Explanation: React.FunctionComponent = () => {
-  // Returns the correct step # image based on the index of the element
-  const handleCardImage = (index: number) => {
-    switch (index) {
-      case 0:
-        return index1;
-      case 1:
-        return index2;
-      case 2:
-        return index3;
-    }
-  };
-  // Applies the correct color based on the index of the element
-  const handleCardColor = (index: number) => {
-    switch (index) {
-      case 0:
-        return styles.expCard0;
-      case 1:
-        return styles.expCard1;
-      case 2:
-        return styles.expCard2;
-    }
-  };
-
   // Generates the list of cards in the how it works section
   const generateList = () => {
+    // Applies the correct color based on the index of the element
+    const handleCardColor = (index: number) => {
+      switch (index) {
+        case 0:
+          return styles.expCard0;
+        case 1:
+          return styles.expCard1;
+        case 2:
+          return styles.expCard2;
+      }
+    };
+    // Returns the correct step # image based on the index of the element
+    const handleCardImage = (index: number) => {
+      switch (index) {
+        case 0:
+          return index1;
+        case 1:
+          return index2;
+        case 2:
+          return index3;
+      }
+    };
     const contentList: Step[] = [
       {
         step: 1,

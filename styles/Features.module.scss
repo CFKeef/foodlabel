@@ -1,6 +1,5 @@
-@media (max-width: 480px) {
-  .explanationContainer {
-    background-color: #592cba;
+@media (min-width: 480px) {
+  .featuresContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,71 +12,71 @@
         width: 100%;
         text-align: center;
         padding: 0;
-        margin: 0;
         margin: 0 0 10px 0;
       }
 
       h1 {
-        color: #ffe6e2;
+        color: #300076;
         font-size: 28px;
       }
 
       p {
-        color: hsla(8, 100%, 94%, 0.7);
+        color: rgba(48, 0, 118, 0.7);
         font-size: 16px;
         margin: 0 0 20px 0;
       }
 
-      ol {
+      ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
 
         li {
+          background-color: #fff;
+          margin: 20px;
+          flex: 1 0 30%;
+          padding: 40px;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
           flex-direction: column;
-          margin: 0;
-          padding: 20px 0;
-          h2,
+
           h1,
           p {
-            color: #592cba;
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 0;
           }
-
           h1 {
             font-size: 22px;
+            color: #300076;
           }
 
           p {
             font-size: 14px;
-            width: 80%;
+            color: rgba(48, 0, 118, 0.7);
           }
           img {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            height: 32px;
+            width: auto;
           }
-        }
-
-        .expCard0 {
-          background-color: #ffe6e2;
-          margin-bottom: 20px;
-        }
-        .expCard1 {
-          background-color: #e2e6ff;
-          margin-bottom: 20px;
-        }
-        .expCard2 {
-          background-color: #cae1e7;
         }
       }
     }
   }
 }
 
-@media (min-width: 480px) {
-  .explanationContainer {
-    background-color: #592cba;
+@media (max-width: 480px) {
+  .featuresContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,58 +93,53 @@
       }
 
       h1 {
-        color: #ffe6e2;
+        color: #300076;
         font-size: 28px;
       }
 
       p {
-        color: hsla(8, 100%, 94%, 0.7);
+        color: rgba(48, 0, 118, 0.7);
         font-size: 16px;
         margin: 0 0 20px 0;
       }
 
-      ol {
+      ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
+
         li {
+          background-color: #fff;
+          padding: 20px;
+          margin: 20px 0;
+          height: 250px;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
           flex-direction: column;
-          margin: 20px;
-          padding: 20px;
-          h2,
+          overflow: hidden;
+
           h1,
           p {
-            color: #592cba;
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 0;
           }
-
           h1 {
             font-size: 22px;
+            color: #300076;
           }
 
           p {
             font-size: 14px;
             width: 100%;
+            color: rgba(48, 0, 118, 0.7);
           }
           img {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            height: 36px;
+            width: auto;
           }
-        }
-
-        .expCard0 {
-          background-color: #ffe6e2;
-        }
-        .expCard1 {
-          background-color: #e2e6ff;
-        }
-        .expCard2 {
-          background-color: #cae1e7;
         }
       }
     }
