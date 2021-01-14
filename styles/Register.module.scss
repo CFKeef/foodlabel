@@ -27,7 +27,7 @@
     p {
       color: #aaaaaa;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .inputContainer {
@@ -36,13 +36,13 @@
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
-      margin-bottom: 0.5rem;
+      margin: 1rem 0;
 
       label {
         color: #592cba;
         font-weight: bold;
         letter-spacing: 0.56px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         font-size: 16px;
       }
 
@@ -56,7 +56,6 @@
         background: #e2e6ff;
         height: 40px;
         padding: 10px;
-        margin-bottom: 1rem;
         color: #300076;
         width: 100%;
         &::placeholder {
@@ -64,34 +63,8 @@
         }
       }
     }
-    .checkBoxContainer {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: row;
-      width: 100%;
-      margin: 0.5rem 0;
-
-      .textSpan {
-        font-size: 14px;
-        margin-left: 10px;
-        color: #300076;
-        a {
-          text-decoration: underline;
-          &:hover,
-          &:focus {
-            cursor: pointer;
-          }
-
-          &:active {
-            transform: scale(0.99);
-          }
-        }
-      }
-    }
-
     button {
-      margin: 2rem 0;
+      margin: 1rem 0 2rem 0;
       width: 100%;
       background: none;
       color: inherit;
@@ -121,39 +94,16 @@
         transform: scale(0.99);
       }
     }
-
-    .loginSpan {
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      color: #300076;
-      margin-bottom: 2rem;
-      padding: 10px;
-      background: #cae1e7;
-      a {
-        text-decoration: underline;
-        &:hover,
-        &:focus {
-          cursor: pointer;
-        }
-
-        &:active {
-          transform: scale(0.99);
-        }
-      }
-    }
   }
 }
+
 @media (max-width: 480px) {
-  .contentContainer {
-    margin: 3rem 0;
-  }
   .posContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem 20px 0 20px;
+    margin: 5rem 20px 5rem 20px;
     width: calc(100% - 40px);
 
     h1 {
@@ -174,13 +124,13 @@
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
-      margin-bottom: 0.5rem;
+      margin: 1rem 0;
 
       label {
         color: #592cba;
         font-weight: bold;
         letter-spacing: 0.56px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         font-size: 16px;
       }
 
@@ -195,41 +145,14 @@
         height: 40px;
         padding: 10px;
         color: #300076;
-        margin-bottom: 1rem;
         width: 100%;
         &::placeholder {
           color: #300076;
         }
       }
     }
-    .checkBoxContainer {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: row;
-      width: 100%;
-      margin: 0.5rem 0;
-
-      .textSpan {
-        font-size: 14px;
-        margin-left: 10px;
-        color: #300076;
-        a {
-          text-decoration: underline;
-          &:hover,
-          &:focus {
-            cursor: pointer;
-          }
-
-          &:active {
-            transform: scale(0.99);
-          }
-        }
-      }
-    }
-
     button {
-      margin: 2rem 0;
+      margin: 1rem 0 2rem 0;
       width: 100%;
       background: none;
       color: inherit;
@@ -257,27 +180,6 @@
 
       &:active {
         transform: scale(0.99);
-      }
-    }
-
-    .loginSpan {
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      color: #300076;
-      margin-bottom: 2rem;
-      padding: 10px;
-      background: #cae1e7;
-      a {
-        text-decoration: underline;
-        &:hover,
-        &:focus {
-          cursor: pointer;
-        }
-
-        &:active {
-          transform: scale(0.99);
-        }
       }
     }
   }

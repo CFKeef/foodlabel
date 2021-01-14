@@ -30,8 +30,8 @@ const Login: React.FunctionComponent = () => {
       </Head>
       <section className={styles.contentContainer}>
         <div className={styles.posContainer}>
-          <h1>Get Started</h1>
-          <p>Create your Foodlabel Account to start creating labels today</p>
+          <h1>Login</h1>
+          <p>Login to your foodlabel account to continue</p>
           <div className={styles.inputContainer}>
             <label>Email Address</label>
             <input
