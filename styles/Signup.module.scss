@@ -54,11 +54,10 @@
         -moz-box-shadow: none;
         box-shadow: none;
         background: #e2e6ff;
-        height: 50px;
-        line-height: 50px;
+        height: 40px;
         padding: 10px;
-        color: #300076;
         margin-bottom: 1rem;
+        color: #300076;
         width: 100%;
         &::placeholder {
           color: #300076;
@@ -68,7 +67,7 @@
     .checkBoxContainer {
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: center;
       flex-direction: row;
       width: 100%;
       margin: 0.5rem 0;
@@ -190,11 +189,9 @@
         -moz-box-shadow: none;
         box-shadow: none;
         background: #e2e6ff;
-        height: 50px;
-        line-height: 50px;
+        height: 40px;
         padding: 10px;
         color: #300076;
-        margin-bottom: 1rem;
         width: 100%;
         &::placeholder {
           color: #300076;
