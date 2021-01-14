@@ -65,17 +65,25 @@
           }
         }
         .primaryBtn {
-          background: #ffe6e2;
-          height: 40px;
-          width: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            background: #ffe6e2;
+            height: 40px;
+            width: 120px;
+          }
         }
 
         .secondaryBtn {
-          background-color: #592cba;
-          padding: 0 30px;
-
+          display: flex;
+          justify-content: center;
+          align-items: center;
           a {
             color: #ffe6e2;
+            background-color: #592cba;
+            height: 40px;
+            width: 120px;
           }
         }
       }
