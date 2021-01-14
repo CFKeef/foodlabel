@@ -6,8 +6,30 @@ import Burger from "../public/images/burger.svg";
 import Close from "../public/images/x.svg";
 import styles from "../styles/navigation.module.scss";
 
-const Navigation: React.FunctionComponent = () => {
+interface NavigationProps {
+  showOnlyButtons: boolean;
+}
+
+const Navigation: React.FunctionComponent<NavigationProps> = ({
+  showOnlyButtons,
+}: NavigationProps) => {
   const [isShowing, setIsShowing] = useState(false);
+
+  // Hides the links to jump to containers on specific pages
+  const handleGeneratingContainerLinks = () => {
+    if (showOnlyButtons) {
+      return (
+        <React.Fragment>
+          <li>
+            <a href={"#explanation"}>How It Works</a>
+          </li>
+          <li>
+            <a href={"#pricing"}>Pricing</a>
+          </li>
+        </React.Fragment>
+      );
+    }
+  };
 
   // Conditionally change the image of the burger menu
   const handleBurgerImage = () => {
@@ -16,26 +38,25 @@ const Navigation: React.FunctionComponent = () => {
 
   // Handles generating the content for the drop down when it is showing
   const handleDropDown = () => {
-    return isShowing ? <Dropdown /> : null;
+    return isShowing ? <Dropdown showOnlyButtons={showOnlyButtons} /> : null;
   };
 
   return (
     <header className={styles.navContainer}>
       <div className={styles.navRow}>
-        <img
-          src={Logo}
-          draggable={false}
-          className={styles.logoImage}
-          alt={"Image depicting our logo"}
-        />
+        <Link href={"/"}>
+          <a>
+            <img
+              src={Logo}
+              draggable={false}
+              className={styles.logoImage}
+              alt={"Image depicting our logo"}
+            />
+          </a>
+        </Link>
         <nav className={styles.desktopMenu}>
           <ul>
-            <li>
-              <a href={"#explanation"}>How It Works</a>
-            </li>
-            <li>
-              <a href={"#pricing"}>Pricing</a>
-            </li>
+            {handleGeneratingContainerLinks()}
             <li className={styles.primaryBtn}>
               <Link href={"/signup"}>
                 <a>Sign Up</a>

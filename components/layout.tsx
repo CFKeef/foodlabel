@@ -1,12 +1,15 @@
 import Head from "next/head";
+import Footer from "./footer";
 import Navigation from "./navigation";
 
 const Layout = ({
   children,
   home,
+  showFullNav,
 }: {
   children: React.ReactNode;
   home?: boolean;
+  showFullNav: boolean;
 }) => {
   return (
     <div className={"content"}>
@@ -30,8 +33,9 @@ const Layout = ({
           crossOrigin="anonymous"
         />
       </Head>
-      <Navigation />
+      <Navigation showOnlyButtons={showFullNav} />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 };

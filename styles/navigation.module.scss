@@ -17,9 +17,22 @@
       }
     }
 
-    .logoImage {
-      height: 30px;
-      width: auto;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logoImage {
+        height: 30px;
+        width: auto;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+
+        &:active {
+          transform: scale(0.99);
+        }
+      }
     }
 
     nav {
@@ -42,12 +55,13 @@
             width: 100%;
             text-align: center;
           }
-          &:hover {
+          &:hover,
+          &:focus {
             cursor: pointer;
           }
 
           &:active {
-            transform: translateY(2px);
+            transform: scale(0.99);
           }
         }
         .primaryBtn {

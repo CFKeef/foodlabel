@@ -2,16 +2,33 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/dropdown.module.scss";
 
-const Dropdown: React.FunctionComponent = () => {
+interface DropDownProps {
+  showOnlyButtons: boolean;
+}
+
+const Dropdown: React.FunctionComponent<DropDownProps> = ({
+  showOnlyButtons,
+}: DropDownProps) => {
+  // Hides the links to jump to containers on specific pages
+  const handleGeneratingContainerLinks = () => {
+    if (showOnlyButtons) {
+      return (
+        <React.Fragment>
+          <li>
+            <a href={"#explanation"}>How It Works</a>
+          </li>
+          <li>
+            <a href={"#pricing"}>Pricing</a>
+          </li>
+        </React.Fragment>
+      );
+    }
+  };
+
   return (
     <nav className={styles.parentContainer}>
       <ul className={styles.listContainer}>
-        <li>
-          <a href={"#explanation"}>How It Works</a>
-        </li>
-        <li>
-          <a href={"#pricing"}>Pricing</a>
-        </li>
+        {handleGeneratingContainerLinks()}
         <li className={styles.primaryBtn}>
           <Link href={"/signup"}>Sign Up</Link>
         </li>
