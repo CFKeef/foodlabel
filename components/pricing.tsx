@@ -71,7 +71,7 @@ const Pricing: React.FunctionComponent = () => {
                   );
                 })}
               </ul>
-              <Link href={"/"}>Get Started</Link>
+              <Link href={"/purchase/" + index}>Get Started</Link>
             </li>
           );
         })}
@@ -80,7 +80,7 @@ const Pricing: React.FunctionComponent = () => {
   };
 
   return (
-    <section className={styles.pricingContainer}>
+    <section id={"pricing"} className={styles.pricingContainer}>
       <div className={styles.contentContainer}>
         <h1 className={styles.header}>Pricing</h1>
         <p className={styles.subHeader}>

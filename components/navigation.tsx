@@ -31,23 +31,19 @@ const Navigation: React.FunctionComponent = () => {
         <nav className={styles.desktopMenu}>
           <ul>
             <li>
-              <Link href={"/"} passHref>
-                How It Works
-              </Link>
+              <a href={"#explanation"}>How It Works</a>
             </li>
             <li>
-              <Link href={"/"} passHref>
-                Pricing
-              </Link>
+              <a href={"#pricing"}>Pricing</a>
             </li>
             <li className={styles.primaryBtn}>
               <Link href={"/signup"} as={"/signup"}>
-                Sign Up
+                <a>Sign Up</a>
               </Link>
             </li>
             <li className={styles.secondaryBtn}>
               <Link href={"/signin"} as={"/signin"}>
-                Login
+                <a>Login</a>
               </Link>
             </li>
           </ul>

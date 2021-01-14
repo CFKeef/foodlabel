@@ -80,7 +80,7 @@ const Explanation: React.FunctionComponent = () => {
   };
 
   return (
-    <section className={styles.explanationContainer}>
+    <section id={"explanation"} className={styles.explanationContainer}>
       <div className={styles.contentContainer}>
         <h1>How It Works</h1>
         <p>Understand our process in three easy steps!</p>
