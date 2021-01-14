@@ -1,0 +1,20 @@
+.footerContainer {
+  width: 100%;
+  background-color: #f5eee8;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    height: 30px;
+    width: auto;
+  }
+
+  p {
+    color: #300076;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

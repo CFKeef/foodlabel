@@ -7,24 +7,16 @@ const Dropdown: React.FunctionComponent = () => {
     <nav className={styles.parentContainer}>
       <ul className={styles.listContainer}>
         <li>
-          <Link href={"/"} passHref>
-            How It Works
-          </Link>
+          <a href={"#explanation"}>How It Works</a>
         </li>
         <li>
-          <Link href={"/"} passHref>
-            Pricing
-          </Link>
+          <a href={"#pricing"}>Pricing</a>
         </li>
         <li className={styles.primaryBtn}>
-          <Link href={"/signup"} as={"/signup"}>
-            Sign Up
-          </Link>
+          <Link href={"/signup"}>Sign Up</Link>
         </li>
         <li className={styles.secondaryBtn}>
-          <Link href={"/signin"} as={"/signin"}>
-            Login
-          </Link>
+          <Link href={"/login"}>Login</Link>
         </li>
       </ul>
     </nav>

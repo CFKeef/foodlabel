@@ -37,12 +37,12 @@ const Navigation: React.FunctionComponent = () => {
               <a href={"#pricing"}>Pricing</a>
             </li>
             <li className={styles.primaryBtn}>
-              <Link href={"/signup"} as={"/signup"}>
+              <Link href={"/signup"}>
                 <a>Sign Up</a>
               </Link>
             </li>
             <li className={styles.secondaryBtn}>
-              <Link href={"/signin"} as={"/signin"}>
+              <Link href={"/login"}>
                 <a>Login</a>
               </Link>
             </li>
