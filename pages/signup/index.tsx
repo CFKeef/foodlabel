@@ -4,9 +4,12 @@ import Head from "next/head";
 import { reducer, initialState } from "./reducer";
 import styles from "../../styles/Signup.module.scss";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
+import axios, { AxiosResponse } from "axios";
 
 const Signup: React.FunctionComponent = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const router = useRouter();
 
   // Handles dispatching state change based on the name of the input for text input field
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +28,19 @@ const Signup: React.FunctionComponent = () => {
   };
 
   // Middleware to create the new user
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    // Need to write validation function
+
+    axios
+      .post("/api/db/user/register", {
+        state,
+      })
+      .then((res: AxiosResponse) => {
+        if (res.status === 200) {
+          router.push("/login");
+        }
+      });
+  };
 
   return (
     <Layout showFullNav={false}>
@@ -61,7 +76,7 @@ const Signup: React.FunctionComponent = () => {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label>Password</label>
+            <label>Confirm Password</label>
             <input
               type="password"
               value={state.confirmPassword}

@@ -9,7 +9,13 @@
     "tscheck": "yarn eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.3",
     "next": "10.0.5",
+    "next-connect": "^0.9.1",
     "next-images": "^1.6.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -19,6 +25,7 @@
     "sass": "^1.32.2"
   },
   "devDependencies": {
+    "@types/mongodb": "^3.6.3",
     "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
