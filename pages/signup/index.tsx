@@ -4,7 +4,7 @@ import Head from "next/head";
 import { reducer, initialState } from "./reducer";
 import styles from "../../styles/Signup.module.scss";
 import Link from "next/link";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import axios, { AxiosResponse } from "axios";
 
 const Signup: React.FunctionComponent = () => {
