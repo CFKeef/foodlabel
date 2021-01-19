@@ -30,8 +30,6 @@ export const handleUserLogin = async (
   username: string,
   password: string
 ): Promise<boolean> => {
-  const { db } = await connectToDatabase();
-
   const isUserRegistered = await doesUserExist(username);
 
   if (!isUserRegistered) return false;

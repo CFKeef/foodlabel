@@ -1,0 +1,191 @@
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .navRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem 20px 0 20px;
+
+    .desktopMenu {
+      ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: row;
+
+        padding: 0;
+
+        li {
+          margin: 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            p {
+              color: #300076;
+              font-weight: 700;
+              font-size: 16px;
+              letter-spacing: 0.56px;
+              width: 100%;
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              background: #fbf6f2;
+            }
+          }
+          .selected {
+            border-bottom: 2px solid #300076;
+          }
+          &:hover,
+          &:focus {
+            cursor: pointer;
+          }
+
+          &:active {
+            transform: scale(0.99);
+          }
+        }
+        .primaryBtn {
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6e2;
+            height: 40px;
+            width: 120px;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 30em) {
+      .desktopMenu {
+        display: none;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logoImage {
+        height: 30px;
+        width: auto;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+
+        &:active {
+          transform: scale(0.99);
+        }
+      }
+    }
+
+    button {
+      font-size: 100%;
+      font-family: inherit;
+      border: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+    .burger {
+      @media (min-width: 30em) {
+        display: none;
+      }
+    }
+  }
+  .dropdown {
+    width: 100%;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      list-style-type: none;
+      padding: 0 0 5px 0;
+      width: 100%;
+      -webkit-box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
+      -moz-box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
+      box-shadow: 0 4px 2px -2px hsla(0, 0%, 52%, 0.15);
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 40px;
+        margin: 5px 0;
+
+        button {
+          background-color: #fbf6f2;
+        }
+
+        p {
+          color: #300076;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.56px;
+          line-height: 40px;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+        .selected {
+          border-bottom: 2px solid #300076;
+        }
+
+        .primaryBtn {
+          width: 100%;
+          background: #ffe6e2;
+          color: #300076;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.56px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media (min-width: 480px) {
+    .navRow {
+      margin: 0.5rem 0 0 0px;
+    }
+  }
+  button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+
+    @media (min-width: 30em) {
+      display: none;
+    }
+  }
+}
