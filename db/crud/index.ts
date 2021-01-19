@@ -34,9 +34,9 @@ export const handleUserLogin = async (
 
   const isUserRegistered = await doesUserExist(username);
 
-  if (!isUserRegistered) return;
+  if (!isUserRegistered) return false;
 
   const userInfo = await getUserDetails(username);
 
-  console.log(userInfo);
+  return await bcrypt.compare(password, userInfo[0].password);
 };

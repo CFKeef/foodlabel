@@ -13,5 +13,5 @@ export const doesUserExist = async (email: string): Promise<boolean> => {
 // Get User details
 export const getUserDetails = async (email: string) => {
   const { db } = await connectToDatabase();
-  return await await db.collection("users").find({ email: email }).toArray();
+  return await db.collection("users").find({ email: email }).toArray();
 };

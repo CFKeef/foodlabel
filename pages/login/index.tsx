@@ -3,10 +3,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../../components/layout";
 import styles from "../../styles/Login.module.scss";
+import axios, { AxiosResponse } from "axios";
+import { useRouter } from "next/router";
 
 const Login: React.FunctionComponent = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.name) {
@@ -21,7 +24,19 @@ const Login: React.FunctionComponent = () => {
     }
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    const state = { email: email, password: password };
+
+    axios
+      .post("/api/db/user/login", {
+        state,
+      })
+      .then((res: AxiosResponse) => {
+        if (res.status === 200) {
+          router.push("/dashboard");
+        }
+      });
+  };
 
   return (
     <Layout showFullNav={false}>
@@ -57,7 +72,7 @@ const Login: React.FunctionComponent = () => {
             />
           </div>
           <button onClick={() => handleSubmit()} className={styles.button}>
-            Sign Up
+            Login
           </button>
           <span className={styles.loginSpan}>
             Need an account? <Link href={"/signup"}>Sign up here</Link>

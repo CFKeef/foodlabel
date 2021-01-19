@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import bcrypt from "bcrypt";
 import nc from "next-connect";
-import { connectToDatabase } from "../../../../db";
 import { addUser, handleUserLogin } from "../../../../db/crud";
 
 const handler = nc<NextApiRequest, NextApiResponse>().post(async (req, res) => {
