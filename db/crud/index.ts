@@ -1,5 +1,5 @@
 import { connectToDatabase } from "../index";
-import { doesUserExist } from "../util/index";
+import { doesUserExist, getUserDetails } from "../util/index";
 import bcrypt from "bcrypt";
 
 // Creates
@@ -26,6 +26,17 @@ export const addUser = async (username: string, password: string) => {
 // Read
 
 // Handles the log in process
-export const handleUserLogin = async (username: string, password: string) => {
+export const handleUserLogin = async (
+  username: string,
+  password: string
+): Promise<boolean> => {
   const { db } = await connectToDatabase();
+
+  const isUserRegistered = await doesUserExist(username);
+
+  if (!isUserRegistered) return;
+
+  const userInfo = await getUserDetails(username);
+
+  console.log(userInfo);
 };
