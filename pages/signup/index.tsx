@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import axios, { AxiosResponse } from "axios";
 
-const Signup: React.FunctionComponent = () => {
+const Signup: React.FunctionComponent = ({ store }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const router = useRouter();
 

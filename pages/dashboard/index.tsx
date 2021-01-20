@@ -4,6 +4,7 @@ import DashNavigation from "../../components/dashNavigation";
 import Dash from "../../components/dash";
 import Settings from "../../components/settings";
 import Create from "../../components/create";
+import axios from "axios";
 
 const Dashboard: React.FunctionComponent = () => {
   const [selected, setSelected] = useState("Dashboard");
@@ -15,7 +16,7 @@ const Dashboard: React.FunctionComponent = () => {
       case "Create Label":
         return <Create />;
       default:
-        return <Dash />;
+        return <Dash labels={[]} />;
     }
   };
 

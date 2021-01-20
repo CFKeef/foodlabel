@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Footer from "./footer";
 
 const DashLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -26,7 +25,6 @@ const DashLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </Head>
       <main>{children}</main>
-      <Footer />
     </div>
   );
 };

@@ -1,7 +1,5 @@
-export interface IUser {
-  id: number;
-  email: string;
-  password: string;
-  createdOn: Date;
-  authenticated: boolean;
+export interface Label {
+  name: string;
+  date: Date;
+  status?: string;
 }

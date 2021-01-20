@@ -1,23 +1,17 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import bcrypt from "bcrypt";
 import nc from "next-connect";
-import { addUser, handleUserLogin } from "../../../../db/crud";
+import { getUserLabels } from "../../../../db/crud";
 
 const handler = nc<NextApiRequest, NextApiResponse>()
   .post(async (req, res) => {
     const action = req.query.action;
-    const data = req.body.state;
-
+    const data = req.body;
     switch (action) {
-      case "register":
-        await addUser(data.email, data.password);
-        res.status(200).send("Added User");
+      case "add":
         break;
-      case "login":
-        const isValidated = await handleUserLogin(data.email, data.password);
-        isValidated
-          ? res.status(200).send("Welcome Back!")
-          : res.status(403).send("Error with the details provided");
+      case "get":
+        const responseData = await getUserLabels(data.email);
+        res.status(200).send(responseData);
         break;
       default:
         res.status(403).send("Need an Action");
@@ -26,6 +20,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
   })
   .get(async (req, res) => {
     const action = req.query.action;
+    console.log(action);
 
     switch (action) {
       default:
