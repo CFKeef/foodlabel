@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../styles/Dash.module.scss";
 import { Label } from "../types";
-import Clone from "../public/images/clone.svg";
-import Delete from "../public/images/delete.svg";
+import Clone from "../public/images/Clone.svg";
+import Delete from "../public/images/Delete.svg";
 import Download from "../public/images/Download.svg";
-import Edit from "../public/images/edit.svg";
+import Edit from "../public/images/Edit.svg";
 
 interface dashProps {
   labels: Label[];
