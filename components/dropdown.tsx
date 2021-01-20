@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../styles/dropdown.module.scss";
+import styles from "../styles/DropDown.module.scss";
 
 interface DropDownProps {
   showOnlyButtons: boolean;

@@ -3,8 +3,8 @@ import Link from "next/link";
 import Dropdown from "./dropdown";
 import Logo from "../public/images/foodlabel.svg";
 import Burger from "../public/images/burger.svg";
-import Close from "../public/images/x.svg";
-import styles from "../styles/navigation.module.scss";
+import Close from "../public/images/X.svg";
+import styles from "../styles/Navigation.module.scss";
 
 interface NavigationProps {
   showOnlyButtons: boolean;

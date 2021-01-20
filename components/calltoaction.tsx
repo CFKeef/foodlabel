@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "../styles/calltoaction.module.scss";
+import styles from "../styles/CallToAction.module.scss";
 
 const CallToAction: React.FunctionComponent = () => {
   const [email, setEmail] = useState("");

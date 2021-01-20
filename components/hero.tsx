@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
-import HeroImage from "../public/images/HeroImage.svg";
+import HeroImage from "../public/images/heroimage.svg";
 import Link from "next/link";
 
 const Hero: React.FunctionComponent = () => {
