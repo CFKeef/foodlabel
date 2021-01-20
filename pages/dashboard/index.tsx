@@ -5,8 +5,17 @@ import Dash from "../../components/dash";
 import Settings from "../../components/settings";
 import Create from "../../components/create";
 import axios from "axios";
+import { GetServerSideProps } from "next";
+import withSession from "../../util/session";
+import { getUserLabels } from "../../db/crud";
 
-const Dashboard: React.FunctionComponent = () => {
+interface DashboardProps {
+  user: any;
+}
+
+const Dashboard: React.FunctionComponent<DashboardProps> = ({
+  user,
+}: DashboardProps) => {
   const [selected, setSelected] = useState("Dashboard");
 
   const handleContent = () => {
@@ -27,5 +36,19 @@ const Dashboard: React.FunctionComponent = () => {
     </DashLayout>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = withSession(
+  async ({ req, res }) => {
+    const user = req.session.get("FoodLabel");
+    const labels = await getUserLabels(user);
+    if (user === undefined) {
+      return { props: {} };
+    }
+
+    return {
+      props: { user: req.session.get("FoodLabel"), labels: labels },
+    };
+  }
+);
 
 export default Dashboard;

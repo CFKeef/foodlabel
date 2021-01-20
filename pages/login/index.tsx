@@ -35,6 +35,7 @@ const Login: React.FunctionComponent = () => {
         if (res.status === 200) {
           router.push("/dashboard");
         }
+        console.log(res);
       });
   };
 

@@ -20,7 +20,6 @@ const handler = nc<NextApiRequest, NextApiResponse>()
   })
   .get(async (req, res) => {
     const action = req.query.action;
-    console.log(action);
 
     switch (action) {
       default:

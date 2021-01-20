@@ -18,6 +18,7 @@
     "next": "10.0.5",
     "next-connect": "^0.9.1",
     "next-images": "^1.6.2",
+    "next-iron-session": "^4.1.10",
     "next-redux-wrapper": "^6.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",

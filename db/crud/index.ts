@@ -43,7 +43,20 @@ export const handleUserLogin = async (
 export const getUserLabels = async (email: string): Promise<any[]> => {
   const { db } = await connectToDatabase();
 
-  return await db.collection("users").find({ email: email }).toArray();
+  const response = await db
+    .collection("users")
+    .find(
+      { email: email },
+      {
+        projection: {
+          _id: 0,
+          labels: 1,
+        },
+      }
+    )
+    .toArray();
+
+  return response;
 };
 
 // Check if a user exists

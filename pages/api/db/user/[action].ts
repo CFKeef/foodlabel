@@ -1,13 +1,32 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import bcrypt from "bcrypt";
 import nc from "next-connect";
-import { addUser, handleUserLogin } from "../../../../db/crud";
+import { addUser, getUserLabels, handleUserLogin } from "../../../../db/crud";
+import { ironSession } from "next-iron-session";
+const { Iron_PW } = process.env;
 
-const handler = nc<NextApiRequest, NextApiResponse>()
+export let pass: string;
+
+if (Iron_PW) {
+  pass = Iron_PW;
+} else pass = "";
+
+const session = ironSession({
+  cookieName: "FoodLabel",
+  cookieOptions: {
+    secure: false,
+  },
+  password: pass,
+});
+
+interface ExtendedRequest extends NextApiRequest {
+  session: any;
+}
+
+const handler = nc<ExtendedRequest, NextApiResponse>()
+  .use(session)
   .post(async (req, res) => {
     const action = req.query.action;
     const data = req.body.state;
-
     switch (action) {
       case "register":
         await addUser(data.email, data.password);
@@ -15,9 +34,16 @@ const handler = nc<NextApiRequest, NextApiResponse>()
         break;
       case "login":
         const isValidated = await handleUserLogin(data.email, data.password);
-        isValidated
-          ? res.status(200).send("Welcome Back!")
-          : res.status(403).send("Error with the details provided");
+        if (isValidated) {
+          await req.session.set("FoodLabel", {
+            email: data.email,
+          });
+          await req.session.save();
+          res.status(200).send("Test");
+        } else {
+          console.log(21312321);
+          res.status(404).send("Error with the details provided");
+        }
         break;
       default:
         res.status(403).send("Need an Action");
