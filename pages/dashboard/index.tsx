@@ -25,7 +25,17 @@ const Dashboard: React.FunctionComponent<DashboardProps> = ({
       case "Create Label":
         return <Create />;
       default:
-        return <Dash labels={[]} />;
+        return (
+          <Dash
+            labels={[
+              {
+                name: "test",
+                date: new Date().toLocaleDateString("en-Us"),
+                status: "Generated",
+              },
+            ]}
+          />
+        );
     }
   };
 

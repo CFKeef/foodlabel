@@ -1,5 +1,5 @@
 export interface Label {
   name: string;
-  date: Date;
+  date: string;
   status?: string;
 }

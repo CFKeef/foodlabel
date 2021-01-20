@@ -83,6 +83,15 @@
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
+    display: table;
+
+    tr {
+      display: table-row;
+
+      td {
+        display: table-cell;
+      }
+    }
 
     thead {
       tr {
@@ -95,13 +104,13 @@
         width: 40%;
       }
       .dateRow {
-        width: 10%;
+        width: 15%;
       }
       .statusRow {
         width: 20%;
       }
       .actionRow {
-        width: 30%;
+        width: 25%;
       }
     }
 
@@ -118,6 +127,29 @@
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: auto;
+          display: table-cell;
+          font-size: 14px;
+
+          button {
+            font-size: 100%;
+            font-family: inherit;
+            border: 0;
+            padding: 0;
+            margin: 0 5px;
+            margin-top: 4px;
+            background-color: #fbf6f2;
+            img {
+              height: 40px;
+              width: auto;
+            }
+            &:active {
+              transform: scale(0.95);
+            }
+            &:hover,
+            &:focus {
+              cursor: pointer;
+            }
+          }
         }
       }
 

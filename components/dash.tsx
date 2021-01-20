@@ -26,7 +26,7 @@ const Dash: React.FunctionComponent<dashProps> = ({ labels }) => {
       <tbody>
         {labels.map((label) => {
           return (
-            <tr>
+            <tr className={styles.populatedTable}>
               <td>{label.name}</td>
               <td>{label.date}</td>
               <td>{label.status}</td>
