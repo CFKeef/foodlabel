@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "../public/images/foodlabel.svg";
 import styles from "../styles/DashNavigation.module.scss";
 import Burger from "../public/images/burger.svg";
-import Close from "../public/images/x.svg";
+import Close from "../public/images/close.svg";
 
 interface DashNavProps {
   selected: string;
