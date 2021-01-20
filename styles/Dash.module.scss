@@ -1,0 +1,136 @@
+@media (min-width: 30em) {
+  .dashContainer {
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      margin: 2rem 0;
+      .leftContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        width: 70%;
+        h2 {
+          margin: 0;
+          line-height: 40px;
+          color: #592cba;
+        }
+
+        input {
+          height: 40px;
+          width: 35%;
+          margin-left: 4rem;
+          padding-left: 10px;
+          color: #592cba;
+          border: 1px solid #592cba;
+          &::placeholder {
+            color: #300076;
+            font-size: 14px;
+          }
+
+          &:placeholder-shown {
+            line-height: 40px;
+          }
+        }
+      }
+
+      .rightContainer {
+        width: 20%;
+        button {
+          background-color: #592cba;
+          color: #ffe6e2;
+          height: 40px;
+          width: 100%;
+          font-weight: 700;
+          font-size: 14px;
+          letter-spacing: 0.56px;
+          text-align: center;
+        }
+      }
+      button,
+      input {
+        font-size: 100%;
+        font-family: inherit;
+        border: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input {
+        &:hover,
+        &:focus {
+          cursor: text;
+        }
+      }
+
+      button {
+        &:active {
+          transform: scale(0.95);
+        }
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        background-color: #e2e6ff;
+        height: 40px;
+        color: #592cba;
+      }
+
+      .nameRow {
+        width: 40%;
+      }
+      .dateRow {
+        width: 10%;
+      }
+      .statusRow {
+        width: 20%;
+      }
+      .actionRow {
+        width: 30%;
+      }
+    }
+
+    tbody {
+      .populatedTable {
+        height: 40px;
+        color: #592cba;
+        font-weight: bold;
+        display: table-row;
+        border-bottom: 2px solid #e2e2e2;
+        td {
+          text-align: center;
+          text-decoration: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: auto;
+        }
+      }
+
+      .emptyTable {
+        width: 100%;
+
+        td {
+          height: 200px;
+          text-align: center;
+          opacity: 0.3;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
