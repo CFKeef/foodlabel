@@ -1,0 +1,55 @@
+@media (min-width: 30em) {
+  .settingsContainer {
+    h2 {
+      margin: 2rem 0;
+      line-height: 40px;
+      color: #592cba;
+    }
+    .controlsContainer {
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+
+        li {
+          button {
+            background-color: #fbf6f2;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.56px;
+            color: #592cba;
+
+            &:active {
+              transform: scale(0.95);
+            }
+            &:hover,
+            &:focus {
+              cursor: pointer;
+            }
+          }
+          .selected {
+            text-decoration: underline;
+            text-decoration-color: #592cba;
+            text-decoration-thickness: 2px;
+          }
+        }
+      }
+    }
+
+    button {
+      font-size: 100%;
+      font-family: inherit;
+      border: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+} ;

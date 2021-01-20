@@ -1,13 +1,54 @@
 import React, { useReducer } from "react";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import { reducer, initialState } from "./reducer";
 import styles from "../../styles/Signup.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import axios, { AxiosResponse } from "axios";
 
-const Signup: React.FunctionComponent = ({ store }) => {
+type SignupState = {
+  email: string;
+  password: string;
+  confirmPassword: string;
+  companyName?: string;
+  referrer?: string;
+  termFlag: boolean;
+  newsLetterFlag: boolean;
+};
+
+const initialState: SignupState = {
+  email: "",
+  password: "",
+  confirmPassword: "",
+  companyName: "",
+  referrer: "",
+  termFlag: false,
+  newsLetterFlag: false,
+};
+
+interface UpdateFieldAction {
+  type: "UPDATE_FIELD";
+  payload: [key: string, value: string | boolean];
+}
+
+type SignUpFormTypes = UpdateFieldAction;
+
+const reducer: React.Reducer<SignupState, SignUpFormTypes> = (
+  state: SignupState,
+  action: SignUpFormTypes
+) => {
+  switch (action.type) {
+    case "UPDATE_FIELD":
+      return {
+        ...state,
+        [action.payload[0]]: action.payload[1],
+      };
+    default:
+      return state;
+  }
+};
+
+const Signup: React.FunctionComponent = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const router = useRouter();
 

@@ -146,7 +146,9 @@
           padding: 0;
         }
         .selected {
-          border-bottom: 2px solid #300076;
+          text-decoration: underline;
+          text-decoration-color: #300076;
+          text-decoration-thickness: 2px;
         }
 
         .primaryBtn {
